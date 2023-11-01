@@ -1,0 +1,600 @@
+body#page-site-index {
+  #page {
+    padding: 0;
+    background-color: #008e45;
+
+    .secondary-navigation {
+      @extend %border-frequency;
+
+      margin: 1rem auto 0;
+      max-width: $course-content-maxwidth;
+      width: 100%;
+      padding: 0;
+      position: relative;
+
+      &:before {
+        height: 1rem;
+        top: -1rem;
+        content: "";
+        // background-image: url(https://i.ibb.co/3Nxf92z/fondo-ppal.jpg);
+        // background-size: auto;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        z-index: -1;
+      }
+
+      li.nav-item {
+        border-bottom: none;
+      }
+
+      .navigation {
+        margin: 0;
+      }
+    }
+  }
+
+  #page-content {
+    margin-top: 3rem;
+    padding: 0;
+    @extend %border-frequency;
+    &:after {
+      height: 2px;
+    }
+
+    #region-main {
+      width: 100%;
+      padding: 2rem 3rem;
+      background: $white;
+    }
+
+    .card {
+      background-color: #f7f7f7;
+    }
+  }
+
+  #frontpage-banner {
+    position: relative;
+    min-height: calc(70vh - 4.5em);
+    background-attachment: scroll, fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $white;
+    margin: 1rem 6rem 0 6rem;
+
+    #frontpage-banner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      h2 {
+        border-bottom: solid 1px rgba($white, 0.5);
+        color: $white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: none;
+        letter-spacing: 1rem;
+        line-height: 1;
+      }
+
+      h3 {
+        font-weight: lighter;
+        color: $white;
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+    }
+  }
+
+  #frontpage-settings-menu {
+    position: fixed;
+    top: 5.3em;
+    left: 0;
+    background-color: $gray-800;
+    z-index: 1010;
+
+    .action-menu a.dropdown-toggle {
+      color: $white;
+    }
+
+    .context-header-settings-menu {
+      height: auto;
+    }
+
+    .dropdown-toggle .icon {
+      margin-right: 0;
+    }
+  }
+
+  .drawer-toggler button.btn.icon-no-margin {
+    margin-right: 0.75rem;
+  }
+
+  @media (max-width: 768px), (max-height: 469px) {
+    #frontpage-banner #frontpage-banner-content,
+    .frontpage-banner-content {
+      max-width: 80%;
+      padding: 1.5rem;
+      h2 {
+        font-size: 2.3rem;
+        letter-spacing: 0.8rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  #frontpage-cards {
+    max-width: $course-content-maxwidth;
+    background: $white;
+    @extend %border-frequency;
+
+    &:after {
+      height: 2px;
+    }
+
+    &:target {
+      padding-top: 2rem;
+      margin-top: 3rem;
+
+      &:before {
+        margin-top: 0;
+      }
+    }
+
+    #frontpage-cards-title {
+      &:before {
+        height: 3rem;
+        top: -3rem;
+      }
+
+      h2 {
+        display: inline-block;
+      }
+    }
+
+    #frontpage-cards-content {
+      .frontpage-card {
+        padding: 6rem 7rem 4rem;
+        border-top: 1px solid $gray-300;
+        border-bottom: 1px solid $gray-300;
+      }
+
+      .frontpage-card:nth-child(odd) {
+        border-right: 1px solid $gray-300;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  #defaultfrontpagebody {
+    padding-top: 3rem;
+    position: relative;
+
+    .card-box {
+      padding: 3em 2em 1em 2em;
+      background-color: $white;
+      margin-bottom: 2em;
+      position: relative;
+      z-index: 10;
+      flex: 1 1 0;
+
+      &:after {
+        bottom: 0;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        height: 4px;
+        position: absolute;
+        right: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.courses {
+  .course-card {
+    box-shadow: 5px 5px 9px -4px rgba($primary, 0.1);
+    border-bottom: solid 3px $primary;
+    .course-card-img {
+      width: 100%;
+      overflow: hidden;
+      height: 170px;
+      margin: 0 auto;
+    }
+
+    .card-title {
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
+
+    .course-card-text {
+      color: #777;
+      padding: 0 1rem;
+      height: 4rem;
+      overflow: hidden;
+    }
+  }
+}
+
+// Frontpage Carrousel.
+
+#carouselstandartrema {
+  .carousel-inner {
+    max-height: calc(100vh - 4.2rem);
+    a:focus {
+      box-shadow: none;
+    }
+
+    .frontpage-banner-content {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      h2 {
+        border-bottom: solid 1px rgba($white, 0.5);
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: none;
+        letter-spacing: 0rem;
+        line-height: 1;
+        padding-left: 0px !important;
+      }
+      h3 {
+        font-weight: lighter;
+        color: $white;
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 10%;
+    }
+  }
+  #page-wrapper #page-footer {
+    margin-top: 2rem;
+  }
+}
+
+/************************ CSS EXTRUCTURA TREMA 08/23 ***************************/
+
+/*LOGIN /  NAVBAR / FOOTER EXTRUCTURA*/
+/* se modifico tambien archivo template/core/loginform.mustache*/
+/* se modifico tambien archivo template/frontpage_cards.mustache*/
+/* se reemplazo scss/standartrema/message.scss*/
+#page-login-index #loginbtn {
+  width: 50%;
+}
+#page-login-index button.btn.btn-secondary.btn-block {
+  width: 70%;
+  height: auto !important;
+  white-space: break-spaces !important;
+  line-height: 24px;
+  letter-spacing: 0rem;
+  text-transform: none;
+  padding: 10px;
+}
+.aabtn.focus,
+.aabtn:focus,
+.btn-link.focus,
+.btn-link:focus,
+.nav-link.focus,
+.nav-link:focus,
+.editor_atto_toolbar button.focus,
+.editor_atto_toolbar button:focus,
+.editor_atto_toolbar .atto_toolbar_row.focus,
+.editor_atto_toolbar .atto_toolbar_row:focus,
+[role="button"].focus,
+[role="button"]:focus,
+.list-group-item-action.focus,
+.list-group-item-action:focus,
+input[type="checkbox"].focus,
+input[type="checkbox"]:focus,
+input[type="radio"].focus,
+input[type="radio"]:focus,
+input[type="file"].focus,
+input[type="file"]:focus,
+input[type="image"].focus,
+input[type="image"]:focus,
+.sr-only-focusable.focus,
+.sr-only-focusable:focus,
+a.dropdown-toggle.focus,
+a.dropdown-toggle:focus,
+.modal-dialog[tabindex="0"].focus,
+.modal-dialog[tabindex="0"]:focus,
+.moodle-dialogue-base .closebutton.focus,
+.moodle-dialogue-base .closebutton:focus,
+button.close.focus,
+button.close:focus,
+.form-autocomplete-selection.focus,
+.form-autocomplete-selection:focus,
+[role="treeitem"]:not([aria-expanded="true"]).focus,
+[role="treeitem"]:not([aria-expanded="true"]):focus {
+  outline: 0;
+  box-shadow: 0 0 0 0rem rgb(0 0 0 / 25%) !important;
+}
+#page-wrapper
+  .navbar
+  .primary-navigation
+  .navigation
+  .nav-link:hover:not(.active) {
+  border-bottom: 3px solid transparent !important;
+}
+.aalink.focus,
+a.focus.autolink,
+.aalink:focus,
+a.autolink:focus,
+#page-footer a:not([class]).focus,
+#page-footer a:not([class]):focus,
+.arrow_link.focus,
+.arrow_link:focus,
+a:not([class]).focus,
+a:not([class]):focus,
+.activityinstance > a.focus,
+.activityinstance > a:focus {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+@media (max-width: 360px) {
+  #eabccontentcourses .menu-wrapper {
+    margin: 8px -18px;
+    padding-bottom: 8px;
+  }
+  #page-site-index .row.card-deck.my-4 {
+    padding-left: 17px;
+  }
+}
+#page a:not(.dropdown-item),
+body #page a:not(.btn) {
+  text-decoration: none !important;
+  // font-size: 1rem;
+}
+#page-site-index .course-card-view {
+  max-width: 17rem !important;
+  min-width: 17rem !important;
+}
+@media (min-width: 576px) {
+  #page-site-index .card-deck .card {
+    margin-right: 1.1rem;
+    margin-left: 0.5rem;
+  }
+}
+/* RESPONSIVE EN "my"*/
+@media (max-width: 896px) {
+  #page-course-view-topics .w-100,
+  #page-user-profile .w-100 {
+    display: grid !important;
+    justify-content: initial !important;
+  }
+}
+@media (max-width: 767px) {
+  #page-course-view-topics .page-context-header,
+  #page-user-profile .page-context-header {
+    display: contents !important;
+  }
+}
+/*end*/
+
+/************css TREMA STANDAR***************/
+
+/*1.NAVBAR*/
+#page-login-index #page-wrapper #page:not(.drawers) {
+  background: transparent url([[https://i.ibb.co/TggvN1f/login-fondo.png]]) !important;
+}
+// #page-login-index #page-wrapper #page:not(.drawers) {
+//   background: transparent url([[pix:theme|bg_login_trema2]]) no-repeat center
+//     top !important;
+// }
+
+/*#page-login-index #page {
+   background:transparent !important;
+   background:  url([[pix:theme|bg_login_trema]]) no-repeat center top!important;;
+}*/
+/* EXTRAS REDONDEA LAS PUNTAS DE LOS CARDS*/
+#page-site-index #page-content .card {
+  border-radius: 0 0 0 0 !important;
+  background-color: #f7f7f7;
+}
+/*end*/
+
+/*2. CUATRO CARD*/
+#page-site-index #frontpage-cards #frontpage-cards-content .frontpage-card {
+  border-top: 0px solid #dee2e6 !important;
+  border-bottom: 0px solid #dee2e6 !important;
+  display: grid !important;
+  text-align: center !important;
+}
+#page-site-index
+  #frontpage-cards
+  #frontpage-cards-content
+  .frontpage-card:nth-child(odd) {
+  border-right: 0px solid #dee2e6 !important;
+  display: grid !important;
+  text-align: center !important;
+}
+#page-site-index #frontpage-cards-content h3 {
+  padding-top: 15px !important;
+}
+/*end*/
+
+/*3.FOOTER*/
+h5.card-title {
+  font-size: 1.1rem !important;
+  text-transform: uppercase;
+  font-weight: 500 !important;
+  color: #a5c23f !important;
+}
+#page-footer {
+  background-color: #353535 !important;
+}
+#page-footer .logininfo,
+#page-footer .tool_dataprivacy,
+#page-footer .copyleft {
+  display: none;
+}
+
+.footergrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.footergrid ul li a i.fa {
+  font-size: 1.2rem;
+  background: #a5c23f;
+}
+.footergrid p {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+.footergrid ul {
+  display: inline-flex;
+  padding: 0px;
+}
+.footergrid ul li {
+  padding-left: 8px;
+  list-style: none;
+}
+
+.footergrid .dir_01 {
+  text-align: left;
+}
+.footergrid .dir_01 img {
+  padding-bottom: 15px;
+  margin: 0px !important;
+}
+.footergrid .dir_01 li {
+  padding: 0px !important;
+  margin-bottom: 0.5rem !important;
+}
+.footergrid .dir_01 li .fa-2x {
+  font-size: 1.5em;
+}
+.footergrid .dir_01 ul {
+  display: block;
+}
+.footergrid .dir_01 ul.labeled-icons li span {
+  color: #ffffff;
+}
+
+.footergrid .dir_02 {
+  text-align: end;
+}
+.footergrid .dir_02 ul li a i {
+  color: #ffffff !important;
+  border: 0px solid !important;
+  padding: 9px !important;
+  border-radius: 33px !important;
+  width: 38px !important;
+  text-align: center !important;
+  margin-top: 13px !important;
+}
+@media (max-width: 800px) {
+  .footergrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .footergrid .dir_01,
+  .footergrid .dir_02 {
+    text-align: center;
+  }
+}
+/*end*/
+
+/*. WIDGET BOTONERA "TRES ACCESO" LOGUEADO Y DESLOGUEADO*/
+/*A_BOXES VIDEO*/
+#boxvideopremium {
+  border-radius: 0em;
+}
+#boxvideopremium .block-item {
+  height: auto;
+}
+#boxnotloggedin .text-center {
+  border-radius: 0px;
+  margin: 1%;
+}
+#boxvideopremium.row {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  border-radius: 0em;
+}
+#boxvideopremium .col-md-4 {
+  flex: 0 0 29%;
+  max-width: 29%;
+}
+#boxvideopremium .col-md-6.col-sm-6.col-xs-12.text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+@media (max-width: 800px) {
+  #boxvideopremium .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+} /*END*/
+
+/*B_ACORDEON*/
+.acordeontotal h6 {
+  /*font-family: 'NunitoMedium' !important;*/
+  background: -webkit-linear-gradient(left top, #92003b, #92003b);
+  background: linear-gradient(to bottom right, #92003b, #92003b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.acordeontotal .card-header {
+  background-color: rgba(0, 0, 0, 0.01);
+  padding: 0px;
+}
+.acordeontotal .btn.btn-link {
+  font-size: 1.1rem !important;
+  margin: 0rem !important;
+  height: auto !important;
+  white-space: initial !important;
+}
+
+// modificación de íconos personalizables en cards de página principal
+// ubicación original: linea 2019 en moodle\theme\boost\scss\fontawesome\_icons.scss
+
+.#{$fa-css-prefix}-address-book-o:before {
+  content: url(https://i.ibb.co/jk8tkPL/leyendo64.png);
+}
+.#{$fa-css-prefix}-address-book-o:hover {
+  animation: vertical-shaking 1s;
+}
+@keyframes vertical-shaking {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+  75% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*END*/
